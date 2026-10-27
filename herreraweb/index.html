@@ -1,0 +1,1786 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>My First Page - Water Ripple</title>
+
+    <!-- Bootstrap 3 -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/style.css">
+
+    <!-- Owl Carousel CSS files -->
+    <link href="csslib/owl.carousel.min.css" rel="stylesheet" type="text/css">
+    <link href="csslib/owl.theme.default.min.css" rel="stylesheet" type="text/css">
+    <!-- Font Awesome 4.7 (for Facebook, Twitter, Google+ icons) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+</head>
+
+
+<body>
+
+    <!-- ===========================
+     NAVIGATION
+============================ -->
+
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+
+        <div class="container">
+
+            <div class="navbar-header">
+
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+
+                </button>
+
+
+                <a class="navbar-brand" href="#">
+
+                    <img src="img/Dota2.png" alt="Logo">
+
+                    <span>My Dota 2</span>
+
+                </a>
+
+            </div>
+
+
+            <div class="collapse navbar-collapse" id="myNavbar">
+
+                <!-- Navigation Menu -->
+
+                <ul class="nav navbar-nav menu">
+
+                    <li class="active">
+                        <a href="#">Home</a>
+                    </li>
+
+                    <li>
+                        <a href="#services">Our Services</a>
+                    </li>
+
+                    <li>
+                        <a href="#works">Works</a>
+                    </li>
+
+                    <li>
+                        <a href="#team">Team</a>
+                    </li>
+
+                    <li>
+                        <a href="#about">About</a>
+                    </li>
+
+                    <li>
+                        <a href="#career">Career</a>
+                    </li>
+
+                    <li>
+                        <a href="#latest">Blog</a>
+                    </li>
+
+                </ul>
+
+
+                <!-- Location Button -->
+
+                <ul class="nav navbar-nav navbar-right">
+
+                    <li>
+                        <a href="#" class="location-btn">
+                            Our Location
+                        </a>
+                    </li>
+
+                </ul>
+
+            </div>
+
+        </div>
+
+    </nav>
+
+
+
+    <!-- ===========================
+         HERO SECTION
+    ============================ -->
+
+    <div class="jumbotron text-center">
+
+        <h1>My First Bootstrap Page</h1>
+
+        <p>
+            Resize this responsive page to see the effect!
+        </p>
+
+    </div>
+
+
+
+    <!-- ===========================
+         RIPPLE / TYPING SECTION
+    ============================ -->
+
+    <section class="slider text-center" id="rippleSection">
+
+        <h2 class="typing">
+
+            <span id="prefix"></span>
+
+            <span id="highlight"></span>
+
+            <span class="cursor">|</span>
+
+        </h2>
+
+    </section>
+
+
+
+    <!-- ===========================
+         CONTACT US
+    ============================ -->
+
+    <section class="about-us">
+
+        <h2>Contact Us</h2>
+
+
+        <div class="social-icons">
+
+
+            <div class="social-item">
+
+                <a href="#">
+                    <i class="fab fa-facebook-f"></i>
+                </a>
+
+                <span>Facebook</span>
+
+            </div>
+
+
+            <div class="social-item">
+
+                <a href="#">
+                    <i class="fab fa-twitter"></i>
+                </a>
+
+                <span>Twitter</span>
+
+            </div>
+
+
+            <div class="social-item">
+
+                <a href="#">
+                    <i class="fab fa-reddit"></i>
+                </a>
+
+                <span>Reddit</span>
+
+            </div>
+
+
+            <div class="social-item">
+
+                <a href="#">
+                    <i class="fab fa-linkedin-in"></i>
+                </a>
+
+                <span>LinkedIn</span>
+
+            </div>
+
+
+            <div class="social-item">
+
+                <a href="#">
+                    <i class="fab fa-windows"></i>
+                </a>
+
+                <span>Windows</span>
+
+            </div>
+
+
+        </div>
+
+    </section>
+
+
+
+    <!-- ===========================
+         SCRIPTS
+    ============================ -->
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js">
+    </script>
+
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js">
+    </script>
+
+
+    <!-- ===========================
+         JQUERY RIPPLES PLUGIN
+    ============================ -->
+
+    <script src="https://cdn.jsdelivr.net/npm/jquery.ripples@0.6.3/dist/jquery.ripples.min.js">
+    </script>
+
+
+    <!-- ===========================
+         OWL CAROUSEL JS
+    ============================ -->
+
+    <script src="js/owl.carousel.min.js" type="text/javascript"></script>
+
+
+
+    <!-- ===========================
+         CUSTOM JAVASCRIPT
+    ============================ -->
+
+    <script>
+
+        $(document).ready(function () {
+
+
+            console.log("Document ready - initializing...");
+
+
+            /* ===========================
+               RIPPLE EFFECT
+            ============================ */
+
+            if (typeof $.fn.ripples === 'function') {
+
+                console.log("Ripples plugin loaded successfully!");
+
+
+                $(".slider").ripples({
+
+                    dropRadius: 30,
+
+                    perturbance: 0.03,
+
+                    resolution: 512,
+
+                    interactive: true,
+
+                    imageUrl: null
+
+                });
+
+
+                console.log("Ripples initialized on .slider");
+
+
+                /* Click Ripple */
+
+                $(".slider").on('click', function (e) {
+
+                    var x = e.pageX - $(this).offset().left;
+
+                    var y = e.pageY - $(this).offset().top;
+
+
+                    $(this).ripples('drop', x, y, 30, 0.10);
+
+                });
+
+
+                /* Automatic Ripple */
+
+                setInterval(function () {
+
+                    var $el = $(".slider");
+
+
+                    if ($el.length) {
+
+                        var w = $el.outerWidth();
+
+                        var h = $el.outerHeight();
+
+
+                        $el.ripples(
+
+                            'drop',
+
+                            Math.random() * w,
+
+                            Math.random() * h,
+
+                            15 + Math.random() * 10,
+
+                            0.03 + Math.random() * 0.04
+
+                        );
+
+                    }
+
+                }, 1500);
+
+
+            } else {
+
+                console.error("Ripples plugin NOT loaded! Check CDN URL.");
+
+            }
+
+
+
+            /* ===========================
+               STICKY NAVIGATION
+            ============================ */
+
+            $(window).scroll(function () {
+
+                if ($(this).scrollTop() >= 60) {
+
+                    $("nav").addClass("secondary");
+
+                } else {
+
+                    $("nav").removeClass("secondary");
+
+                }
+
+            });
+
+
+
+            /* ===========================
+               TYPING EFFECT
+            ============================ */
+
+            const data = [
+
+                {
+                    prefix: "I Love ",
+                    highlight: "Coding."
+                },
+
+                {
+                    prefix: "I Love ",
+                    highlight: "Dota 2."
+                },
+
+                {
+                    prefix: "Welcome To ",
+                    highlight: "My Website."
+                }
+
+            ];
+
+
+            const prefixEl = document.getElementById("prefix");
+
+            const highlightEl = document.getElementById("highlight");
+
+
+            if (prefixEl && highlightEl) {
+
+
+                let word = 0;
+
+                let letter = 0;
+
+                let deleting = false;
+
+
+                function animate() {
+
+
+                    let p = data[word].prefix;
+
+                    let h = data[word].highlight;
+
+
+                    let full = p + h;
+
+
+                    if (!deleting) {
+
+                        letter++;
+
+                    } else {
+
+                        letter--;
+
+                    }
+
+
+                    let current = full.substring(0, letter);
+
+
+                    if (letter <= p.length) {
+
+                        prefixEl.textContent = current;
+
+                        highlightEl.textContent = "";
+
+                    } else {
+
+                        prefixEl.textContent = p;
+
+                        highlightEl.textContent = current.substring(p.length);
+
+                    }
+
+
+                    if (!deleting && letter === full.length) {
+
+                        deleting = true;
+
+                        setTimeout(animate, 1500);
+
+                        return;
+
+                    }
+
+
+                    if (deleting && letter === 0) {
+
+                        deleting = false;
+
+                        word = (word + 1) % data.length;
+
+                    }
+
+
+                    setTimeout(animate, deleting ? 40 : 80);
+
+                }
+
+
+                animate();
+
+
+                console.log("Typing animation started");
+
+            }
+
+
+
+            /* ===========================
+             OWL CAROUSEL - TEAM MEMBERS
+            ============================ */
+
+            if (typeof $.fn.owlCarousel === 'function') {
+
+                $("#team-members").owlCarousel({
+                    items: 3,
+                    autoplay: true,
+                    smartSpeed: 800,
+                    loop: true,
+                    autoplayHoverPause: true,
+                    dots: true,           // Dots enabled
+                    nav: false,           // No arrows
+                    margin: 20,
+                    responsive: {
+                        0: {
+                            items: 1
+                        },
+                        480: {
+                            items: 2
+                        },
+                        768: {
+                            items: 3
+                        }
+                    }
+                });
+
+                console.log("Owl Carousel initialized on #team-members");
+
+            } else {
+                console.error("Owl Carousel plugin NOT loaded!");
+            }
+        });
+
+    </script>
+
+
+
+    <!-- ===========================
+         ABOUT SECTION
+    ============================ -->
+
+    <section class="extra-section about-section" id="about">
+
+        <div class="container text-center">
+
+            <h2>About Us</h2>
+
+            <p>
+                Welcome to My Dota 2 website.
+                This page is created to demonstrate
+                Bootstrap, CSS animations, JavaScript,
+                and the water ripple effect.
+            </p>
+
+
+            <p>
+                Scroll through the page to see how
+                the navigation changes while you
+                move down the website.
+            </p>
+
+        </div>
+
+    </section>
+
+
+
+    <br>
+
+
+
+    <!-- ===========================
+         SERVICES SECTION
+    ============================ -->
+
+    <section class="service-area" id="services">
+
+
+        <div class="container">
+
+
+            <!-- Services Title -->
+
+            <div class="row">
+
+                <div class="col-xs-12">
+
+
+                    <div class="section-title text-center wow zoomIn" data-wow-duration="5s" data-wow-delay=".5s">
+
+
+                        <h2>
+                            <b>SERVICES</b>
+                        </h2>
+
+
+                        <p>
+                            You can ask questions regarding
+                            the issues we will solve together
+                            for sure.
+                        </p>
+
+
+                    </div>
+
+
+                </div>
+
+            </div>
+
+
+
+            <br><br>
+
+
+
+            <!-- Services -->
+
+            <div class="row wow bounceInUp" data-wow-duration="1.25s" data-wow-delay="1.25s">
+
+
+                <!-- ===========================
+                     DEVELOPMENT
+                ============================ -->
+
+                <div class="col-md-4 col-sm-6 col-xs-12">
+
+                    <div class="service-wrap text-center">
+
+
+                        <div class="service-icon">
+
+                            <i class="fa fa-leaf"></i>
+
+                        </div>
+
+
+                        <h3>
+                            Development
+                        </h3>
+
+
+                        <p>
+                            Lorem ipsum dolor sit amet,
+                            consectetur adipisicing elit.
+                            Lorem ipsum dolor sit amet,
+                            consectetur adipisicing elit.
+                        </p>
+
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- ===========================
+                     SUPPORT
+                ============================ -->
+
+                <div class="col-md-4 col-sm-6 col-xs-12">
+
+                    <div class="service-wrap text-center">
+
+
+                        <div class="service-icon">
+
+                            <i class="fa fa-laptop"></i>
+
+                        </div>
+
+
+                        <h3>
+                            Support
+                        </h3>
+
+
+                        <p>
+                            Lorem ipsum dolor sit amet,
+                            consectetur adipisicing elit.
+                            Lorem ipsum dolor sit amet,
+                            consectetur adipisicing elit.
+                        </p>
+
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- ===========================
+                     MARKETING
+                ============================ -->
+
+                <div class="col-md-4 col-sm-6 col-xs-12">
+
+                    <div class="service-wrap text-center">
+
+
+                        <div class="service-icon">
+
+                            <i class="fa fa-heart"></i>
+
+                        </div>
+
+
+                        <h3>
+                            Marketing
+                        </h3>
+
+
+                        <p>
+                            Lorem ipsum dolor sit amet,
+                            consectetur adipisicing elit.
+                            Lorem ipsum dolor sit amet,
+                            consectetur adipisicing elit.
+                        </p>
+
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- ===========================
+                     INSURANCE
+                ============================ -->
+
+                <div class="col-md-4 col-sm-6 col-xs-12">
+
+                    <div class="service-wrap text-center">
+
+
+                        <div class="service-icon">
+
+                            <i class="fa fa-cogs"></i>
+
+                        </div>
+
+
+                        <h3>
+                            Insurance
+                        </h3>
+
+
+                        <p>
+                            Lorem ipsum dolor sit amet,
+                            consectetur adipisicing elit.
+                            Lorem ipsum dolor sit amet,
+                            consectetur adipisicing elit.
+                        </p>
+
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- ===========================
+                     DESIGN
+                ============================ -->
+
+                <div class="col-md-4 col-sm-6 col-xs-12">
+
+                    <div class="service-wrap text-center">
+
+
+                        <div class="service-icon">
+
+                            <i class="fa fa-diamond"></i>
+
+                        </div>
+
+
+                        <h3>
+                            Design
+                        </h3>
+
+
+                        <p>
+                            Lorem ipsum dolor sit amet,
+                            consectetur adipisicing elit.
+                            Lorem ipsum dolor sit amet,
+                            consectetur adipisicing elit.
+                        </p>
+
+
+                    </div>
+
+                </div>
+
+
+
+                <!--WEB DESIGN -->
+
+                <div class="col-md-4 col-sm-6 col-xs-12">
+
+                    <div class="service-wrap text-center">
+
+
+                        <div class="service-icon">
+
+                            <i class="fa fa-cog"></i>
+
+                        </div>
+
+
+                        <h3>
+                            Web Design
+                        </h3>
+
+
+                        <p>
+                            Lorem ipsum dolor sit amet,
+                            consectetur adipisicing elit.
+                            Lorem ipsum dolor sit amet,
+                            consectetur adipisicing elit.
+                        </p>
+
+
+                    </div>
+
+                </div>
+
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!--TEAM SECTION -->
+    <section class="team-section" id="team">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12 text-center">
+                    <h2><b>MEMBERS</b></h2>
+                    <p class="sub-title">
+                        You can ask the question regarding the issues we will <br>
+                        solve that together for sure
+                    </p>
+                </div>
+            </div>
+
+            <br><br>
+
+            <div class="row">
+                <div class="col-md-12">
+                    <div id="team-members" class="owl-carousel owl-theme">
+
+                        <!-- Member 1 - Tyler Perry -->
+                        <div class="team-member">
+                            <div class="image-wrapper">
+                                <img src="img/fiveteam.webp" alt="Tyler Perry">
+                            </div>
+                            <div class="team-member-info">
+                                <h4 class="team-member-name">Tyler Perry</h4>
+                                <h4 class="team-member-designation">Founder</h4>
+                                <ul class="social-list">
+                                    <li>
+                                        <a href="#" class="facebook">
+                                            <i class="fa fa-facebook"></i>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#" class="twitter">
+                                            <i class="fa fa-twitter"></i>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#" class="google">
+                                            <i class="fa fa-google-plus"></i>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <!-- Member 2 - John Wick -->
+                        <div class="team-member">
+                            <div class="image-wrapper">
+                                <img src="img/oneteam.jpg" alt="John Wick">
+                            </div>
+                            <div class="team-member-info">
+                                <h4 class="team-member-name">John Wick</h4>
+                                <h4 class="team-member-designation">System Administrator</h4>
+                                <ul class="social-list">
+                                    <li>
+                                        <a href="#" class="facebook">
+                                            <i class="fa fa-facebook"></i>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#" class="twitter">
+                                            <i class="fa fa-twitter"></i>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#" class="google">
+                                            <i class="fa fa-google-plus"></i>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <!-- Member 3 - T'Challa -->
+                        <div class="team-member">
+                            <div class="image-wrapper">
+                                <img src="img/team2.jpg" alt="T'Challa">
+                            </div>
+                            <div class="team-member-info">
+                                <h4 class="team-member-name"> T'Challa</h4>
+                                <h4 class="team-member-designation">Sr Designer</h4>
+                                <ul class="social-list">
+                                    <li>
+                                        <a href="#" class="facebook">
+                                            <i class="fa fa-facebook"></i>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#" class="twitter">
+                                            <i class="fa fa-twitter"></i>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#" class="google">
+                                            <i class="fa fa-google-plus"></i>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <!-- Member 4 - Tony Stark -->
+                        <div class="team-member">
+                            <div class="image-wrapper">
+                                <img src="img/one.jpg" alt="Tony Stark">
+                            </div>
+                            <div class="team-member-info">
+                                <h4 class="team-member-name">Tony Stark</h4>
+                                <h4 class="team-member-designation">Sr Developer</h4>
+                                <ul class="social-list">
+                                    <li>
+                                        <a href="#" class="facebook">
+                                            <i class="fa fa-facebook"></i>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#" class="twitter">
+                                            <i class="fa fa-twitter"></i>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#" class="google">
+                                            <i class="fa fa-google-plus"></i>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <!-- Member 5 - the Rock -->
+                        <div class="team-member">
+                            <div class="image-wrapper">
+                                <img src="img/team-3.jpg" alt="The Rock">
+                            </div>
+                            <div class="team-member-info">
+                                <h4 class="team-member-name">The Rock</h4>
+                                <h4 class="team-member-designation">Sr Cybersecurity Analyst</h4>
+                                <ul class="social-list">
+                                    <li>
+                                        <a href="#" class="facebook">
+                                            <i class="fa fa-facebook"></i>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#" class="twitter">
+                                            <i class="fa fa-twitter"></i>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#" class="google">
+                                            <i class="fa fa-google-plus"></i>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonial Markups -->
+
+    <br><br>
+
+    <section class="testimonials" id="testimonial">
+        <div class="container">
+
+            <!-- Title -->
+            <div class="row">
+                <div class="col-md-12 text-center wow fadeInDownBig">
+
+                    <h2><b>REVIEWS</b></h2>
+
+                    <div class="sub-heading">
+                        <div class="border-bottom"></div>
+                    </div>
+
+                </div>
+            </div>
+
+            <br><br>
+
+            <!-- Carousel -->
+            <div class="row wow fadeInDownBig">
+                <div class="col-sm-12">
+
+                    <div id="carousel-testimonials" class="carousel slide" data-ride="carousel">
+
+
+                        <ol class="carousel-indicators">
+                            <li data-target="#carousel-testimonials" data-slide-to="0" class="active"></li>
+
+                            <li data-target="#carousel-testimonials" data-slide-to="1"></li>
+
+                            <li data-target="#carousel-testimonials" data-slide-to="2"></li>
+                        </ol>
+
+
+                        <div class="carousel-inner">
+
+
+                            <div class="item active text-center">
+
+                                <img src="img/Jaz.jpg" class="center-block" alt="Jazhiel Herrera">
+
+                                <h2>Jazhiel Herrera</h2>
+
+                                <h4>Sr Graphic Designer</h4>
+
+                                <p>
+                                    A successful person is someone who continues
+                                    to work hard and never gives up on their dreams.
+                                </p>
+
+                            </div>
+
+
+                            <div class="item text-center">
+
+                                <img src="img/jaz.jpg" class="center-block" alt="Reviewer">
+
+                                <h2>Jazhiel Herrera</h2>
+
+                                <h4>Sr Designer</h4>
+
+                                <p>
+                                    Hard work and dedication can help us achieve
+                                    our goals and become successful in life.
+                                </p>
+
+                            </div>
+
+
+
+                            <div class="item text-center">
+
+                                <img src="img/jaz.jpg" class="center-block" alt="Reviewer">
+
+                                <h2>Jazhiel Herrera</h2>
+
+                                <h4>System Administrator</h4>
+
+                                <p>
+                                    Keep learning, keep improving, and never stop
+                                    believing in yourself and your abilities.
+                                </p>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!--======================== FAQ Markups Start =============================-->
+    <section class="faq">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12 text-center">
+                    <!--======================== FAQ Markups Start =============================-->
+                    <section class="faq">
+
+                        <div class="container">
+
+                            <!-- FAQ TITLE -->
+                            <div class="row">
+                                <div class="col-md-12 text-center">
+
+                                    <h2><b>GENERAL FAQs</b></h2>
+
+                                    <div class="sub-heading">
+                                        <p>
+                                            You can ask the question regarding the issues we will<br>
+                                            solve that together for sure
+                                        </p>
+                                    </div>
+
+                                </div>
+                            </div>
+
+                            <br><br>
+
+                            <!-- FAQ CONTENT -->
+                            <div class="row faq-content">
+
+                                <!-- LEFT SIDE - FAQ -->
+                                <div class="col-md-8">
+
+                                    <div class="panel-group" id="accordion">
+
+                                        <!-- FAQ 1 -->
+                                        <div class="panel panel-default">
+
+                                            <div class="panel-heading" id="headingOne">
+
+                                                <h4 class="panel-title">
+
+                                                    <a href="#collapseOne" data-toggle="collapse"
+                                                        data-parent="#accordion">
+
+                                                        Do you have any questions?
+
+                                                    </a>
+
+                                                </h4>
+
+                                            </div>
+
+                                            <div id="collapseOne" class="panel-collapse collapse in"
+                                                aria-labelledby="headingOne">
+
+                                                <div class="panel-body">
+
+                                                    <p>
+                                                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                                        Eum, eligendi repellendus. Labore expedita doloribus unde
+                                                        beatae iusto...
+                                                    </p>
+
+                                                </div>
+
+                                            </div>
+
+                                        </div>
+
+
+                                        <!-- FAQ 2 -->
+                                        <div class="panel panel-default">
+
+                                            <div class="panel-heading" id="headingTwo">
+
+                                                <h4 class="panel-title">
+
+                                                    <a href="#collapseTwo" class="collapsed" data-toggle="collapse"
+                                                        data-parent="#accordion">
+
+                                                        Are you getting it exactly?
+
+                                                    </a>
+
+                                                </h4>
+
+                                            </div>
+
+                                            <div id="collapseTwo" class="panel-collapse collapse"
+                                                aria-labelledby="headingTwo">
+
+                                                <div class="panel-body">
+
+                                                    <p>
+                                                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                                        Eum, eligendi repellendus. Labore expedita doloribus unde
+                                                        beatae iusto...
+                                                    </p>
+
+                                                </div>
+
+                                            </div>
+
+                                        </div>
+
+
+                                        <!-- FAQ 3 -->
+                                        <div class="panel panel-default">
+
+                                            <div class="panel-heading" id="headingThree">
+
+                                                <h4 class="panel-title">
+
+                                                    <a href="#collapseThree" class="collapsed" data-toggle="collapse"
+                                                        data-parent="#accordion">
+
+                                                        Is it clearly explained?
+
+                                                    </a>
+
+                                                </h4>
+
+                                            </div>
+
+                                            <div id="collapseThree" class="panel-collapse collapse"
+                                                aria-labelledby="headingThree">
+
+                                                <div class="panel-body">
+
+                                                    <p>
+                                                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                                        Eum, eligendi repellendus. Labore expedita doloribus unde
+                                                        beatae iusto...
+                                                    </p>
+
+                                                </div>
+
+                                            </div>
+
+                                        </div>
+
+
+                                        <!-- FAQ 4 -->
+                                        <div class="panel panel-default">
+
+                                            <div class="panel-heading" id="headingFour">
+
+                                                <h4 class="panel-title">
+
+                                                    <a href="#collapseFour" class="collapsed" data-toggle="collapse"
+                                                        data-parent="#accordion">
+
+                                                        Course is deserving anything?
+
+                                                    </a>
+
+                                                </h4>
+
+                                            </div>
+
+                                            <div id="collapseFour" class="panel-collapse collapse"
+                                                aria-labelledby="headingFour">
+
+                                                <div class="panel-body">
+
+                                                    <p>
+                                                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                                        Eum, eligendi repellendus. Labore expedita doloribus unde
+                                                        beatae iusto...
+                                                    </p>
+
+                                                </div>
+
+                                            </div>
+
+                                        </div>
+
+                                    </div>
+
+                                </div>
+
+
+                                <!-- RIGHT SIDE - PHONE -->
+                                <div class="col-md-4 phone-column">
+
+                                    <div class="freeimage wow bounceInRight" data-wow-duration=".8s"
+                                        data-wow-delay=".8s">
+
+                                        <img src="img/Phone.png" alt="Phone">
+
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                    </section>
+                    <!--======================== FAQ Markups End =============================-->
+                    <h2><b>GENERAL FAQs</b></h2>
+                    <div class="sub-heading">
+                        <p>You can ask the question regarding the issues we will<br>
+                            solve that together for sure
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div><br><br>
+
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="panel-group" id="accordion">
+
+                        <div class="panel panel-default">
+                            <div class="panel-heading" id="headingOne">
+                                <h4 class="panel-title">
+                                    <a href="#collapseOne" class="collapsed" data-toggle="collapse"
+                                        data-parent="#accordion">Do you have any questions?</a>
+                                </h4>
+                            </div>
+
+                            <div id="collapseOne" class="panel-collapse collapse in" aria-labelledby="headingOne">
+                                <div class="panel-body">
+                                    <p>
+                                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum, eligendi
+                                        repellendus. Labore expedita doloribus unde bea...
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="panel panel-default">
+                            <div class="panel-heading" id="headingTwo">
+                                <h4 class="panel-title">
+                                    <a href="#collapseTwo" class="collapsed" data-toggle="collapse"
+                                        data-parent="#accordion">Are you getting it exactly?</a>
+                                </h4>
+                            </div>
+
+                            <div id="collapseTwo" class="panel-collapse collapse" aria-labelledby="headingTwo">
+                                <div class="panel-body">
+                                    <p>
+                                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum, eligendi
+                                        repellendus. Labore expedita doloribus unde beatae iusto...
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="panel panel-default">
+                            <div class="panel-heading" id="headingThree">
+                                <h4 class="panel-title">
+                                    <a href="#collapseThree" class="collapsed" data-toggle="collapse"
+                                        data-parent="#accordion">Is it clearly explained?</a>
+                                </h4>
+                            </div>
+
+                            <div id="collapseThree" class="panel-collapse collapse" aria-labelledby="headingThree">
+                                <div class="panel-body">
+                                    <p>
+                                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum, eligendi
+                                        repellendus. Labore expedita doloribus unde beatae iusto...
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="panel panel-default">
+                            <div class="panel-heading" id="headingFour">
+                                <h4 class="panel-title">
+                                    <a href="#collapseFour" class="collapsed" data-toggle="collapse"
+                                        data-parent="#accordion">Course is deserving any?</a>
+                                </h4>
+                            </div>
+
+                            <div id="collapseFour" class="panel-collapse collapse" aria-labelledby="headingFour">
+                                <div class="panel-body">
+                                    <p>
+                                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum, eligendi
+                                        repellendus. Labore expedita doloribus unde beatae iusto...
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="freeimage wow bounceInRight" data-wow-duration=".8s" data-wow-delay=".8s">
+                            <div class="col-md-2 col-md-offset-1">
+                                <img src="Phone.png">
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--======================== FAQ Markups End =============================-->
+
+    <!--======================== Video Markup Start ============================-->
+    <section class="video-area wow bounceInUp" id="video">
+
+        <div id="color_overlay" class="color-overlay">
+
+            <div class="video-container">
+
+                <div id="player"></div>
+
+                <div class="video-mask"></div>
+
+            </div>
+
+            <div class="container">
+
+                <div class="row">
+
+                    <div class="col-md-12 text-center">
+
+                        <div class="video-mask">
+
+                            <a href="https://www.youtube.com/watch?v=QeV2-GXI3IE" class="play" target="_blank">
+                            </a>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+    <!--======================== Video Markup End ============================-->
+
+    <!-- ------------------- Blog Markup Starts ---------------------- -->
+
+    <section class="latest-news-area" id="latest">
+
+        <div class="container">
+
+            <div class="row">
+
+                <div class="col-xs-12">
+
+                    <div class="section-title text-center wow zoomIn" data-wow-duration=".2s" data-wow-delay=".2s">
+
+                        <h2><b>RECENT BLOGS</b></h2>
+
+                        <div class="sub-heading">
+                            You can ask the question regarding the issues we will<br>
+                            solve that together for sure
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            <br><br>
+
+
+            <div class="row">
+
+                <div class="news-active">
+
+
+
+
+                    <div class="col-md-4 col-sm-6 col-xs-12 wow fadeInLeft" data-wow-duration=".4s"
+                        data-wow-delay=".4s">
+
+                        <div class="latest-news-wrap">
+
+                            <div class="news-img">
+
+                                <img src="img/1.jpg" class="img-responsive" alt="Blog Image 1">
+
+                                <div class="date">
+                                    <span>31</span>
+                                    <span>Dec</span>
+                                </div>
+
+                            </div>
+
+
+                            <div class="news-content">
+
+                                <i class="fa fa-facebook"></i>
+                                <i class="fa fa-twitter"></i>
+                                <i class="fa fa-linkedin"></i>
+                                <i class="fa fa-youtube"></i>
+                                <i class="fa fa-whatsapp"></i>
+
+                                <p>
+                                    Who is such a man as does not want to get success?
+                                    Life is not meant for work. If life is gone, health
+                                    is gone. If wealth is gone, if character is gone,
+                                    then everything is gone. Life is very precious.
+                                </p>
+
+                                <a href="https://news.google.com/home?hl=en-PH&gl=PH&ceid=PH:en" class="read-more"
+                                    target="_blank" rel="noopener noreferrer">
+                                    Read more..
+                                </a>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+
+
+                    <div class="col-md-4 col-sm-6 col-xs-12 wow slideInUp" data-wow-duration=".8s" data-wow-delay=".8s">
+
+                        <div class="latest-news-wrap">
+
+                            <div class="news-img">
+
+                                <img src="img/2.jpg" class="img-responsive" alt="Blog Image 2">
+
+                                <div class="date">
+                                    <span>31</span>
+                                    <span>Dec</span>
+                                </div>
+
+                            </div>
+
+
+                            <div class="news-content">
+
+                                <i class="fa fa-facebook"></i>
+                                <i class="fa fa-twitter"></i>
+                                <i class="fa fa-linkedin"></i>
+                                <i class="fa fa-youtube"></i>
+                                <i class="fa fa-whatsapp"></i>
+
+                                <p>
+                                    Who is such a man as does not want to get success?
+                                    Life is not meant for work. If life is gone, health
+                                    is gone. If wealth is gone, if character is gone,
+                                    then everything is gone. Life is very precious.
+                                </p>
+
+                                <a href="https://news.google.com/home?hl=en-PH&gl=PH&ceid=PH:en" class="read-more"
+                                    target="_blank" rel="noopener noreferrer">
+                                    Read more..
+                                </a>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+
+
+                    <div class="col-md-4 col-sm-6 col-xs-12 wow fadeInRight" data-wow-duration=".6s"
+                        data-wow-delay=".6s">
+
+                        <div class="latest-news-wrap">
+
+                            <div class="news-img">
+
+                                <img src="img/3.jpg" class="img-responsive" alt="Blog Image 3">
+
+                                <div class="date">
+                                    <span>31</span>
+                                    <span>Dec</span>
+                                </div>
+
+                            </div>
+
+
+                            <div class="news-content">
+
+                                <i class="fa fa-facebook"></i>
+                                <i class="fa fa-twitter"></i>
+                                <i class="fa fa-linkedin"></i>
+                                <i class="fa fa-youtube"></i>
+                                <i class="fa fa-whatsapp"></i>
+
+                                <p>
+                                    Who is such a man as does not want to get success?
+                                    Life is not meant for work. If life is gone, health
+                                    is gone. If wealth is gone, if character is gone,
+                                    then everything is gone. Life is very precious.
+                                </p>
+
+                                <a href="https://news.google.com/home?hl=en-PH&gl=PH&ceid=PH:en" class="read-more"
+                                    target="_blank" rel="noopener noreferrer">
+                                    Read more..
+                                </a>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!--=============Counter stats Markup Starts================-->
+
+    <section class="stat" id="stats">
+        <div class="content-box">
+            <br><br>
+            <div class="container">
+                <div class="row text-center">
+
+                    <div class="col-md-3 wow fadeInLeft" data-wow-duration=".3s" data-wow-delay=".3s">
+                        <div class="stat-items">
+                            <i class="fa fa-tv"></i>
+                            <h2><span class="counter text-center">3200</span> <span>+</span></h2>
+                            <p>VIEWS</p>
+                        </div>
+                    </div>
+
+                    <div class="col-md-3 wow fadeInLeft" data-wow-duration=".6s" data-wow-delay=".6s">
+                        <div class="stat-items">
+                            <i class="fa fa-android"></i>
+                            <h2><span class="counter text-center">3987</span> <span>+</span></h2>
+                            <p>ANDROID USER</p>
+                        </div>
+                    </div>
+
+                    <div class="col-md-3 wow fadeInLeft" data-wow-duration=".9s" data-wow-delay=".9s">
+                        <div class="stat-items">
+                            <i class="fa fa-apple"></i>
+                            <h2><span class="counter text-center">7289</span> <span>+</span></h2>
+                            <p>INTERNATIONAL</p>
+                        </div>
+                    </div>
+
+                    <div class="col-md-3 wow fadeInLeft" data-wow-duration="1.2s" data-wow-delay="1.2s">
+                        <div class="stat-items">
+                            <i class="fa fa-windows"></i>
+                            <h2><span class="counter text-center">3934</span> <span>+</span></h2>
+                            <p>WINDOW SUPPORTS</p>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!--=============From Markup Starts================-->
+
+    <section class="contact-area" id="contac_area">
+        <div class="content-box">
+            <div class="row">
+
+                <div class="col-md-6 col-md-offset-3 text-center">
+                    <div class="section-heading wow fadeInUp" data-wow-duration=".2s" data-wow-delay=".2s">
+
+                        <h2 class="section-title">LEAVE A MESSAGE</h2>
+
+                        <div class="border-bottom-now"></div>
+
+                    </div>
+                </div>
+
+            </div>
+
+            <br><br>
+
+            <div class="row wow fadeInUp">
+
+                <div class="col-md-8 col-md-offset-2">
+
+                    <form id="contact-form" class="contact-form" action="contact.php" method="post" novalidate>
+
+                        <div id="form-alert" class="form-alert" role="alert" style="display:none">
+                        </div>
+
+                        <div class="row">
+
+                            <div class="col-md-6">
+                                <input id="name" type="text" class="form-control" name="name" placeholder="Name"
+                                    required>
+                            </div>
+
+                            <div class="col-md-6">
+                                <input id="email" class="form-control" type="email" name="Email" placeholder="Email"
+                                    required>
+                            </div>
+
+                            <div class="col-md-12">
+                                <input type="text" id="subject" placeholder="Subject" class="form-control" name="name5"
+                                    required>
+                            </div>
+
+                            <div class="col-md-12">
+                                <br>
+                                <textarea id="message" rows="5" class="form-control" placeholder="Message"
+                                    required></textarea>
+                            </div>
+
+                            <div class="col-md-12 text-center">
+                                <br>
+                                <button class="btn btnn" type="submit">Submit Message</button>
+                            </div>
+
+                        </div>
+
+                    </form>
+
+                </div>
+
+            </div>
+
+
+            <div class="row">
+
+                <div class="contact-infos">
+
+                    <div class="col-md-4 text-center">
+
+                        <div class="contact-item wow fadeInLeft" data-wow-duration=".3s" data-wow-delay=".3s">
+
+                            <span class="contact-icon">
+                                <i class="fa fa-map-marker"></i>
+                            </span>
+
+                            <p class="contact-detail">
+                                Villareal, Bayawan City<br>
+                                Negros Oriental, Philippines
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="col-md-4 text-center">
+
+                        <div class="contact-item wow fadeInLeft" data-wow-duration=".6s" data-wow-delay=".6s">
+
+                            <span class="contact-icon">
+                                <i class="fa fa-envelope"></i>
+                            </span>
+
+                            <p class="contact-detail">
+                                info@negortek.com<br>
+                                support@negortek.com
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="col-md-4 text-center">
+
+                        <div class="contact-item wow fadeInLeft" data-wow-duration=".9s" data-wow-delay=".9s">
+
+                            <span class="contact-icon">
+                                <i class="fa fa-phone"></i>
+                            </span>
+
+                            <p class="contact-detail">
+                                +123-456-7890 - Central Office<br>
+                                +123-456-7890 - Fax
+                            </p>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+        <!--=========== Markup for Maps ===========-->
+
+        <section class="maps wow fadeInUp" id="map">
+
+            <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3936.621200537166!2d122.80279357478506!3d9.366748490708694!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x33ac9385af943afd%3A0x51259777bbb86e19!2sPuregold%20Bayawan!5e0!3m2!1sen!2sph!4v1791296036642!5m2!1sen!2sph"
+                width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+                referrerpolicy="strict-origin-when-cross-origin"> <iframe>" height="450" style="border:0;"
+                    allowfullscreen="loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </iframe>
+
+        </section>
+</body>
+
+</html>

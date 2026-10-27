@@ -1,0 +1,2807 @@
+/* ==========================
+   BODY / BACKGROUND
+========================== */
+
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+
+    background-image: url("../img/Dota3.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+
+    color: #fff;
+
+    overflow-x: hidden;
+
+    /*
+       Because the navbar is fixed,
+       add space at the top so content
+       does not hide behind it.
+    */
+    padding-top: 70px;
+
+    min-height: 2000px;
+}
+
+
+/* ==========================
+   SMOOTH SCROLLING
+========================== */
+
+html {
+    scroll-behavior: smooth;
+}
+
+
+/* ==========================
+   NAVIGATION
+========================== */
+
+nav.navbar {
+    position: fixed;
+
+    top: 0;
+    left: 0;
+
+    width: 100%;
+
+    z-index: 9999;
+
+    background: transparent !important;
+
+    border: none;
+
+    transition:
+        background-color 0.4s ease,
+        box-shadow 0.4s ease;
+}
+
+
+/* Navbar when scrolling */
+
+nav.navbar.secondary {
+    top: 0;
+
+    background-color: #34495e !important;
+
+    box-shadow:
+        0 2px 10px rgba(0, 0, 0, 0.3);
+}
+
+
+/* Navbar container */
+
+.navbar .container {
+    width: 95%;
+}
+
+
+/* ==========================
+   LOGO
+========================== */
+
+.navbar-brand {
+    display: flex;
+
+    align-items: center;
+
+    height: 70px;
+
+    color: #fff !important;
+
+    font-size: 18px;
+
+    font-weight: bold;
+
+    text-decoration: none;
+}
+
+
+.navbar-brand img {
+    height: 38px;
+
+    width: auto;
+
+    margin-right: 10px;
+}
+
+
+.navbar-brand:hover,
+.navbar-brand:focus {
+    color: #ffffff !important;
+
+    text-decoration: none;
+}
+
+
+/* Navbar collapse */
+
+.navbar-collapse {
+    position: relative;
+}
+
+
+/* ==========================
+   NAVIGATION MENU
+========================== */
+
+.menu {
+    position: absolute;
+
+    left: 50%;
+
+    transform: translateX(-50%);
+
+    margin: 0;
+}
+
+
+.menu>li>a {
+    color: #fff !important;
+
+    font-size: 15px;
+
+    font-weight: 600;
+
+    padding: 25px 12px;
+
+    background: none !important;
+
+    transition: 0.3s;
+}
+
+
+.menu>li>a:hover {
+    color: #63e7ff !important;
+}
+
+
+.menu>.active>a,
+.menu>.active>a:hover,
+.menu>.active>a:focus {
+    background: none !important;
+
+    color: #63e7ff !important;
+}
+
+
+/* ==========================
+   LOCATION BUTTON
+========================== */
+
+.location-btn {
+    margin-top: 10px;
+
+    border-radius: 30px;
+
+    border: 2px solid #63e7ff;
+
+    background: #45adc6 !important;
+
+    color: #fff !important;
+
+    font-weight: bold;
+
+    transition: 0.3s;
+}
+
+
+.location-btn:hover,
+.location-btn:focus {
+    background: #2f90a8 !important;
+
+    color: #fff !important;
+}
+
+
+/* ==========================
+   JUMBOTRON
+========================== */
+
+.jumbotron {
+    background: transparent;
+
+    color: #fff;
+
+    font-size: 70px;
+
+    font-weight: bold;
+
+    text-shadow:
+        3px 3px 10px rgba(0, 0, 0, .8);
+}
+
+
+.jumbotron p {
+    color: #fff;
+
+    font-size: 24px;
+
+    text-shadow:
+        2px 2px 8px rgba(0, 0, 0, .8);
+}
+
+
+/* ==========================
+   SLIDER / RIPPLE
+========================== */
+
+.slider {
+    min-height: 250px;
+
+    padding: 40px 0;
+
+    text-align: center;
+
+    background: rgba(0, 0, 0, 0.20);
+}
+
+
+.slider h2 {
+    margin: 0;
+
+    font-size: 50px;
+
+    font-weight: bold;
+
+    text-transform: uppercase;
+
+    color: #ffffff;
+
+    text-shadow:
+        0 0 10px rgba(0, 0, 0, .8);
+}
+
+
+.typing {
+    color: white;
+
+    font-size: 50px;
+
+    font-weight: bold;
+
+    text-transform: uppercase;
+}
+
+
+#highlight {
+    color: #ff8c00;
+}
+
+
+.primary {
+    color: #63e7ff;
+}
+
+
+.orange {
+    color: #ff8c00;
+
+    font-weight: bold;
+}
+
+
+.typed-cursor,
+.cursor {
+    display: inline-block;
+
+    color: #ffffff;
+
+    font-size: 50px;
+
+    font-weight: bold;
+
+    animation: blink .8s infinite;
+}
+
+
+/* ==========================
+   BLINK ANIMATION
+========================== */
+
+@keyframes blink {
+
+    0% {
+        opacity: 1;
+    }
+
+    50% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+
+/* ==========================
+   CONTACT US
+========================== */
+
+.about-us {
+    margin-top: 60px;
+
+    padding: 60px 20px;
+
+    text-align: center;
+
+    background: rgba(0, 0, 0, 0.25);
+}
+
+
+.about-us h2 {
+    font-size: 42px;
+
+    color: #fff;
+
+    margin-bottom: 50px;
+
+    text-shadow:
+        2px 2px 8px rgba(0, 0, 0, .9);
+}
+
+
+/* Social Icons */
+
+.social-icons {
+    display: flex;
+
+    justify-content: center;
+
+    flex-wrap: wrap;
+
+    gap: 35px;
+}
+
+
+.social-item {
+    text-align: center;
+}
+
+
+.social-item a {
+    width: 50px;
+
+    height: 50px;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    border-radius: 50%;
+
+    background: #324b8b;
+
+    color: #fff;
+
+    text-decoration: none;
+
+    font-size: 24px;
+
+    box-shadow:
+        0 8px 20px rgba(0, 0, 0, .35);
+
+    transition: .3s;
+}
+
+
+.social-item a:hover {
+    background: deepskyblue;
+
+    transform:
+        translateY(-8px) scale(1.1);
+}
+
+
+.social-item span {
+    display: block;
+
+    margin-top: 15px;
+
+    font-size: 15px;
+
+    font-weight: bold;
+
+    color: #fff;
+}
+
+
+/* ==========================
+   ABOUT / OTHER SECTIONS
+========================== */
+
+.extra-section {
+    min-height: 550px;
+
+    padding: 120px 20px;
+
+    color: #fff;
+
+    background: rgba(0, 0, 0, 0.30);
+}
+
+
+.extra-section h2 {
+    color: #ffffff;
+
+    font-size: 42px;
+
+    font-weight: bold;
+
+    text-align: center;
+
+    margin-bottom: 50px;
+
+    text-shadow:
+        3px 3px 10px rgba(0, 0, 0, 0.9);
+}
+
+
+.extra-section p {
+    color: #ffffff;
+
+    font-size: 18px;
+
+    line-height: 1.8;
+
+    text-align: center;
+
+    text-shadow:
+        2px 2px 6px rgba(0, 0, 0, 0.9);
+}
+
+
+.about-section {
+    min-height: 550px;
+
+    padding-top: 130px;
+
+    text-align: center;
+}
+
+
+.works-section {
+    min-height: 550px;
+}
+
+
+.team-section {
+    min-height: 550px;
+}
+
+
+.career-section {
+    min-height: 550px;
+
+    text-align: center;
+}
+
+
+/* ==========================
+   SERVICES SECTION
+========================== */
+
+.service-area {
+    margin-top: 30px;
+
+    padding: 60px 0 80px;
+
+    background: rgba(0, 0, 0, 0.35);
+
+    position: relative;
+}
+
+
+.service-area .section-title {
+    margin-bottom: 30px;
+}
+
+
+.service-area .section-title h2 {
+    color: #ffffff;
+
+    font-size: 38px;
+
+    font-weight: bold;
+
+    text-shadow:
+        2px 2px 8px rgba(0, 0, 0, 0.9);
+}
+
+
+.service-area .section-title p {
+    color: #ffffff;
+
+    font-size: 16px;
+
+    margin-bottom: 0;
+
+    text-shadow:
+        2px 2px 6px rgba(0, 0, 0, 0.9);
+}
+
+
+/* ==========================
+   SERVICE CARDS
+========================== */
+
+.service-wrap {
+    position: relative;
+
+    overflow: hidden;
+
+    padding: 35px 25px;
+
+    margin-top: 20px;
+
+    min-height: 260px;
+
+    background: rgba(52, 73, 94, 0.70);
+
+    border:
+        1px solid rgba(99, 231, 255, 0.35);
+
+    border-radius: 10px;
+
+    box-shadow:
+        0 10px 25px rgba(0, 0, 0, 0.45);
+
+    transition:
+        all 0.5s ease;
+
+    z-index: 1;
+}
+
+
+/* Card Hover */
+
+.service-wrap:hover {
+    transform: translateY(-8px);
+
+    background: rgba(52, 73, 94, 0.90);
+
+    border-color: #63e7ff;
+
+    box-shadow:
+        0 15px 35px rgba(0, 0, 0, 0.7),
+        0 0 15px rgba(99, 231, 255, 0.3);
+
+    color: #ffffff;
+}
+
+
+/* ==========================
+   SERVICE ICON
+========================== */
+
+.service-icon {
+    position: relative;
+
+    z-index: 5;
+}
+
+
+.service-icon i {
+    font-size: 40px;
+
+    margin-bottom: 20px;
+
+    color: #63e7ff;
+
+    transition:
+        all 0.5s ease;
+
+    text-shadow:
+        0 0 10px rgba(99, 231, 255, 0.5);
+}
+
+
+/* Rotate Icon */
+
+.service-wrap:hover .service-icon i {
+    transform: rotate(360deg);
+
+    color: #ffffff;
+}
+
+
+/* ==========================
+   SERVICE TITLE
+========================== */
+
+.service-wrap h3 {
+    position: relative;
+
+    z-index: 5;
+
+    color: #ffffff;
+
+    font-size: 25px;
+
+    font-weight: 700;
+
+    padding-bottom: 15px;
+
+    margin-top: 10px;
+
+    margin-bottom: 10px;
+
+    text-shadow:
+        2px 2px 5px rgba(0, 0, 0, 0.8);
+}
+
+
+.service-wrap:hover h3 {
+    color: #ffffff;
+}
+
+
+/* ==========================
+   SERVICE DESCRIPTION
+========================== */
+
+.service-wrap p {
+    position: relative;
+
+    z-index: 5;
+
+    color: #ffffff;
+
+    font-size: 14px;
+
+    line-height: 1.7;
+
+    margin-bottom: 0;
+
+    text-shadow:
+        1px 1px 4px rgba(0, 0, 0, 0.8);
+}
+
+
+/* ==========================
+   SERVICE HOVER EFFECT
+========================== */
+
+.service-wrap::before,
+.service-wrap::after {
+    content: "";
+
+    position: absolute;
+
+    width: 120%;
+
+    height: 300%;
+
+    background: rgba(99, 231, 255, 0.12);
+
+    transform: rotate(45deg);
+
+    transition:
+        all 0.5s ease;
+
+    opacity: 0;
+
+    z-index: 2;
+
+    pointer-events: none;
+}
+
+
+/* Left */
+
+.service-wrap::before {
+    top: -37px;
+
+    left: 100%;
+}
+
+
+.service-wrap:hover::before {
+    left: -27px;
+
+    opacity: 1;
+}
+
+
+/* Right */
+
+.service-wrap::after {
+    right: 100%;
+
+    bottom: -37px;
+}
+
+
+.service-wrap:hover::after {
+    right: -27px;
+
+    opacity: 1;
+}
+
+
+/* Keep content above hover */
+
+.service-wrap>* {
+    position: relative;
+
+    z-index: 5;
+}
+
+
+/* ==========================
+   FOOTER
+========================== */
+
+.site-footer {
+    min-height: 250px;
+
+    padding: 80px 20px;
+
+    background: rgba(0, 0, 0, 0.75);
+
+    color: #fff;
+
+    text-align: center;
+}
+
+
+.site-footer h3 {
+    color: #63e7ff;
+
+    font-weight: bold;
+
+    font-size: 28px;
+}
+
+
+.site-footer p {
+    color: #fff;
+
+    margin-top: 15px;
+}
+
+
+/* ==========================
+   WORK STYLES
+========================== */
+
+.work {
+    margin-top: 25px;
+}
+
+
+.row.no-gutters [class*=col-] {
+    padding-left: 0;
+
+    padding-right: 0;
+}
+
+
+.img-wrapper {
+    overflow: hidden;
+
+    width: 100%;
+
+    max-height: 330px;
+
+    margin: 0;
+
+    padding: 0;
+
+    position: relative;
+}
+
+
+.img-wrapper img {
+    transition:
+        transform 0.5s ease;
+
+    width: 100%;
+}
+
+
+.img-wrapper img:hover {
+    transform: scale(1.5);
+
+    cursor: zoom-in;
+}
+
+
+/* ==========================
+   TEAM STYLES
+========================== */
+
+.team-section {
+    padding: 60px 0 80px;
+}
+
+
+.team-section h2 {
+    color: #ffffff;
+
+    font-size: 42px;
+
+    font-weight: bold;
+
+    text-shadow:
+        2px 2px 8px rgba(0, 0, 0, 0.9);
+
+    margin-bottom: 15px;
+}
+
+
+.team-section .sub-title {
+    color: #ffffff;
+
+    font-size: 16px;
+
+    text-shadow:
+        2px 2px 6px rgba(0, 0, 0, 0.9);
+
+    line-height: 1.8;
+}
+
+
+/* Team Member Card */
+
+.team-member {
+    text-align: center;
+
+    margin: 0 10px;
+
+    background: rgba(0, 0, 0, 0.4);
+
+    border-radius: 12px;
+
+    overflow: hidden;
+
+    transition:
+        all 0.4s ease;
+
+    border:
+        1px solid rgba(255, 255, 255, 0.05);
+}
+
+
+.team-member:hover {
+    transform: translateY(-10px);
+
+    background: rgba(0, 0, 0, 0.6);
+
+    border-color:
+        rgba(99, 231, 255, 0.2);
+
+    box-shadow:
+        0 15px 40px rgba(0, 0, 0, 0.6);
+}
+
+
+/* Image wrapper */
+
+.team-member .image-wrapper {
+    width: 100%;
+
+    height: 350px;
+
+    overflow: hidden;
+
+    background: rgba(0, 0, 0, 0.2);
+}
+
+
+.team-member .image-wrapper img {
+    width: 100%;
+
+    height: 100%;
+
+    object-fit: cover;
+
+    object-position: center 25%;
+
+    display: block;
+
+    transition:
+        transform 0.5s ease;
+}
+
+
+.team-member:hover .image-wrapper img {
+    transform: scale(1.08);
+}
+
+
+/* Member information */
+
+.team-member-info {
+    padding: 20px 15px 25px;
+
+    text-align: center;
+}
+
+
+.team-member-name {
+    font-size: 22px;
+
+    font-weight: 700;
+
+    letter-spacing: 1px;
+
+    margin: 0;
+
+    color: #ffffff;
+
+    text-shadow:
+        1px 1px 4px rgba(0, 0, 0, 0.8);
+}
+
+
+.team-member-designation {
+    color: #63e7ff;
+
+    font-size: 16px;
+
+    font-weight: 600;
+
+    letter-spacing: 1px;
+
+    margin-top: 5px;
+
+    margin-bottom: 15px;
+
+    text-transform: capitalize;
+
+    text-shadow:
+        1px 1px 4px rgba(0, 0, 0, 0.8);
+}
+
+
+/* Social media icons */
+
+.social-list {
+    padding-left: 0;
+
+    margin-top: 10px;
+
+    margin-bottom: 0;
+
+    display: flex;
+
+    justify-content: center;
+
+    gap: 12px;
+}
+
+
+.social-list li {
+    list-style: none;
+
+    display: inline-block;
+}
+
+
+.social-list li a {
+    display: inline-flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    width: 45px;
+
+    height: 45px;
+
+    border-radius: 50%;
+
+    background: rgba(0, 0, 0, 0.4);
+
+    color: #64707b !important;
+
+    text-decoration: none !important;
+
+    transition:
+        all 0.3s ease;
+
+    font-size: 20px;
+}
+
+
+.social-list li a i {
+    color: #64707b;
+
+    font-size: 20px;
+
+    line-height: 1;
+}
+
+
+/* Facebook hover */
+
+.social-list li a.facebook:hover {
+    background: #1877f2;
+
+    color: #64707b !important;
+
+    transform: translateY(-3px);
+
+    border-color: #1877f2;
+
+    box-shadow:
+        0 5px 15px rgba(24, 119, 242, 0.4);
+}
+
+
+.social-list li a.facebook:hover i {
+    color: #64707b !important;
+}
+
+
+/* Twitter hover */
+
+.social-list li a.twitter:hover {
+    background: #1da1f2;
+
+    color: #64707b !important;
+
+    transform: translateY(-3px);
+
+    border-color: #1da1f2;
+
+    box-shadow:
+        0 5px 15px rgba(29, 161, 242, 0.4);
+}
+
+
+.social-list li a.twitter:hover i {
+    color: #64707b !important;
+}
+
+
+/* Google+ hover */
+
+.social-list li a.google:hover {
+    background: #dd4b39;
+
+    color: #64707b !important;
+
+    transform: translateY(-3px);
+
+    border-color: #dd4b39;
+
+    box-shadow:
+        0 5px 15px rgba(221, 75, 57, 0.4);
+}
+
+
+.social-list li a.google:hover i {
+    color: #64707b !important;
+}
+
+
+/* ==========================
+   OWL CAROUSEL DOTS
+========================== */
+
+.owl-theme .owl-dots {
+    position: relative;
+
+    margin-top: 35px !important;
+
+    margin-bottom: 10px !important;
+
+    text-align: center !important;
+}
+
+
+.owl-theme .owl-dots .owl-dot {
+    display: inline-block !important;
+
+    zoom: 1 !important;
+}
+
+
+.owl-theme .owl-dots .owl-dot span {
+    width: 14px !important;
+
+    height: 14px !important;
+
+    margin: 5px 8px !important;
+
+    background:
+        rgba(255, 255, 255, 0.25) !important;
+
+    display: block !important;
+
+    border-radius: 50% !important;
+
+    transition:
+        all 0.3s ease !important;
+
+    border:
+        2px solid rgba(255, 255, 255, 0.1) !important;
+}
+
+
+/* Active dot */
+
+.owl-theme .owl-dots .owl-dot.active span,
+.owl-theme .owl-dots .owl-dot:hover span {
+    background:
+        #63e7ff !important;
+
+    transform: scale(1.3) !important;
+
+    border-color:
+        #63e7ff !important;
+
+    box-shadow:
+        0 0 25px rgba(99, 231, 255, 0.6) !important;
+}
+
+
+/* ==========================
+   FAQ SECTION
+========================== */
+
+.faq {
+    width: 100%;
+
+    padding-top: 70px;
+
+    padding-bottom: 100px;
+
+    background: #ffffff;
+
+    color: #222222;
+}
+
+
+.faq .container {
+    width: 90%;
+
+    max-width: 1200px;
+
+    margin: 0 auto;
+}
+
+
+/* ==========================
+   FAQ TITLE
+========================== */
+
+.faq h2 {
+    color: #222222;
+
+    font-size: 36px;
+
+    font-weight: 700;
+
+    margin-bottom: 15px;
+}
+
+
+.faq .sub-heading p {
+    color: #222222;
+
+    font-size: 16px;
+
+    line-height: 24px;
+
+    margin-bottom: 20px;
+}
+
+
+/* ==========================
+   FAQ CONTENT
+========================== */
+
+.faq-content {
+    display: flex;
+
+    align-items: flex-start;
+}
+
+
+/* ==========================
+   LEFT FAQ
+========================== */
+
+.faq-content .col-md-8 {
+    padding-right: 30px;
+}
+
+
+/* ==========================
+   ACCORDION
+========================== */
+
+#accordion {
+    width: 100%;
+}
+
+
+#accordion .panel {
+    border: none;
+
+    border-radius: 0;
+
+    box-shadow: none;
+
+    margin-bottom: 10px;
+
+    background: transparent;
+}
+
+
+#accordion .panel-heading {
+    padding: 0;
+
+    border: none;
+
+    border-radius: 0;
+
+    background: transparent;
+}
+
+
+#accordion .panel-title {
+    margin: 0;
+}
+
+
+#accordion .panel-title a {
+    display: block;
+
+    position: relative;
+
+    padding: 22px 30px 22px 38px;
+
+    background: #34495e;
+
+    color: #ffffff;
+
+    font-size: 16px;
+
+    font-weight: 600;
+
+    text-decoration: none;
+
+    border: none;
+
+    min-height: 72px;
+
+    line-height: 28px;
+
+    transition:
+        all 0.3s ease;
+}
+
+
+/* ==========================
+   PLUS / MINUS BUTTON
+========================== */
+
+#accordion .panel-title a:after {
+    content: "\f068";
+
+    font-family: FontAwesome;
+
+    position: absolute;
+
+    left: -20px;
+
+    top: 12px;
+
+    width: 40px;
+
+    height: 40px;
+
+    line-height: 30px;
+
+    text-align: center;
+
+    font-size: 16px;
+
+    color: #34495e;
+
+    background: #ffffff;
+
+    border: 5px solid #34495e;
+
+    border-radius: 50%;
+
+    transition:
+        all 0.3s ease;
+}
+
+
+/* CLOSED = PLUS */
+
+#accordion .panel-title a.collapsed:after {
+    content: "\f067";
+}
+
+
+/* Hover */
+
+#accordion .panel-title a:hover {
+    background: #3d566e;
+}
+
+
+#accordion .panel-title a:hover:after {
+    transform: rotate(360deg);
+}
+
+
+/* ==========================
+   ANSWER BOX
+========================== */
+
+#accordion .panel-body {
+    padding: 18px 25px;
+
+    background: #eeeeee;
+
+    color: #888888;
+
+    font-size: 14px;
+
+    line-height: 24px;
+
+    border: none;
+}
+
+
+/* ==========================
+   PHONE SIDE
+========================== */
+
+.phone-column {
+    display: flex;
+
+    justify-content: center;
+
+    align-items: flex-start;
+
+    padding-left: 30px;
+}
+
+
+.freeimage {
+    width: 100%;
+
+    text-align: center;
+
+    margin-top: -15px;
+}
+
+
+.freeimage img {
+    display: inline-block;
+
+    width: 270px;
+
+    max-width: 100%;
+
+    height: auto;
+
+    margin: 0 auto;
+}
+
+
+/* ==========================
+   VIDEO STYLE
+========================== */
+
+.video-area {
+    background:
+        linear-gradient(rgba(0, 0, 0, 0.8),
+            rgba(0, 0, 0, 0.9)),
+        url(../img/video.jpg);
+
+    padding-top: 180px;
+
+    padding-bottom: 180px;
+
+    background-size: cover;
+
+    -webkit-background-size: cover;
+
+    -moz-background-size: cover;
+
+    -o-background-size: cover;
+
+    -ms-background-size: cover;
+
+    overflow: hidden;
+
+    margin-top: 40px;
+
+    background-attachment: fixed;
+}
+
+
+/* ==========================
+   PLAY BUTTON
+========================== */
+
+.play {
+    width: 110px;
+
+    height: 110px;
+
+    display: inline-block;
+
+    background: #34495e;
+
+    border-radius: 50%;
+
+    position: relative;
+
+    margin-top: 70px;
+
+    margin-bottom: 40px;
+
+    text-decoration: none;
+
+    box-shadow:
+        0 0 0 10px rgba(0, 167, 221, 0.25),
+        0 0 0 20px rgba(0, 167, 221, 0.15);
+
+    transition:
+        all 0.4s ease;
+}
+
+
+/* White play triangle */
+
+.play::after {
+    content: "";
+
+    position: absolute;
+
+    top: 50%;
+
+    left: 50%;
+
+    transform:
+        translate(-35%, -50%);
+
+    width: 0;
+
+    height: 0;
+
+    border-top:
+        18px solid transparent;
+
+    border-bottom:
+        18px solid transparent;
+
+    border-left:
+        28px solid white;
+}
+
+
+/* Hover */
+
+.play:hover {
+    transform: scale(1.08);
+
+    box-shadow:
+        0 0 0 10px rgba(0, 167, 221, 0.35),
+        0 0 15px 20px rgba(0, 84, 111, 0.5);
+}
+
+
+/* ==========================
+   VIDEO CONTAINER
+========================== */
+
+.video-container {
+    position: relative;
+
+    padding-bottom: 54.25%;
+
+    padding-top: 30px;
+
+    height: 0;
+
+    overflow: hidden;
+
+    margin-top: -130px;
+
+    display: none;
+}
+
+
+/* ==========================================================
+                     BLOG SECTION
+========================================================== */
+
+
+/* Blog Section */
+
+.latest-news-area {
+    margin-top: 40px;
+
+    padding: 40px 0 70px;
+
+    background: #ffffff;
+
+    /*
+       Prevent navbar from covering
+       the Blog heading when using
+       href="#latest"
+    */
+    scroll-margin-top: 80px;
+}
+
+
+/* Blog Heading */
+
+.latest-news-area .section-title {
+    margin-bottom: 10px;
+}
+
+
+.latest-news-area .section-title h2 {
+    font-size: 28px;
+
+    font-weight: 700;
+
+    margin-bottom: 8px;
+
+    color: #222222;
+}
+
+
+.latest-news-area .sub-heading {
+    font-size: 13px;
+
+    line-height: 1.5;
+
+    color: #777777;
+}
+
+
+/* ==========================
+   BLOG CARD
+========================== */
+
+.latest-news-wrap {
+    background: #ffffff;
+
+    border:
+        1px solid #eeeeee;
+
+    box-shadow:
+        0px 3px 10px rgba(0, 0, 0, 0.10);
+
+    margin-bottom: 30px;
+
+    overflow: hidden;
+
+    transition:
+        all 0.3s ease;
+}
+
+
+/* Card Hover */
+
+.latest-news-wrap:hover {
+    box-shadow:
+        0px 8px 20px rgba(0, 0, 0, 0.15);
+
+    transform:
+        translateY(-3px);
+}
+
+
+/* ==========================
+   BLOG IMAGE
+========================== */
+
+.news-img {
+    position: relative;
+
+    overflow: hidden;
+}
+
+
+.news-img img {
+    width: 100%;
+
+    height: 215px;
+
+    object-fit: cover;
+
+    display: block;
+}
+
+
+/* Dark image overlay */
+
+.news-img:before {
+    position: absolute;
+
+    left: 0;
+
+    top: 0;
+
+    width: 100%;
+
+    height: 100%;
+
+    background: #000000;
+
+    content: "";
+
+    opacity: 0;
+
+    transform:
+        scale(0.8);
+
+    transition:
+        all 0.5s ease;
+
+    z-index: 1;
+}
+
+
+/* Hover Overlay */
+
+.latest-news-wrap:hover .news-img:before {
+    opacity: 0.35;
+
+    transform:
+        scale(1);
+}
+
+
+/* ==========================
+   DATE BOX
+========================== */
+
+.date {
+    background: #f89406;
+
+    height: 70px;
+
+    width: 70px;
+
+    left: 0;
+
+    top: 0;
+
+    position: absolute;
+
+    text-align: center;
+
+    padding: 10px;
+
+    z-index: 2;
+}
+
+
+.date span {
+    display: block;
+
+    color: #ffffff;
+
+    font-weight: 700;
+
+    font-size: 16px;
+
+    line-height: 24px;
+}
+
+
+/* ==========================
+   BLOG CONTENT
+========================== */
+
+.news-content {
+    padding: 20px;
+
+    margin-left: 0;
+
+    background: #ffffff;
+}
+
+
+/* ==========================
+   BLOG SOCIAL ICONS
+========================== */
+
+/*
+   Scoped to the Blog section so
+   it does not interfere with
+   your Contact Us social icons.
+*/
+
+.news-content .social-icons {
+    display: flex;
+
+    align-items: center;
+
+    justify-content: flex-start;
+
+    flex-wrap: nowrap;
+
+    gap: 4px;
+
+    margin-bottom: 10px;
+}
+
+
+.news-content .social-icons i {
+    font-size: 16px;
+
+    display: inline-block;
+}
+
+
+.news-content .social-icons .fa {
+    padding: 7px 8px;
+
+    cursor: pointer;
+
+    transition:
+        all 0.3s ease;
+}
+
+
+/* Facebook */
+
+.news-content .social-icons .fa-facebook {
+    color: #3b5995;
+}
+
+
+/* Twitter */
+
+.news-content .social-icons .fa-twitter {
+    color: #0084b4;
+}
+
+
+/* LinkedIn */
+
+.news-content .social-icons .fa-linkedin {
+    color: #0077b5;
+}
+
+
+/* YouTube */
+
+.news-content .social-icons .fa-youtube {
+    color: red;
+}
+
+
+/* WhatsApp */
+
+.news-content .social-icons .fa-whatsapp {
+    color: #34af23;
+}
+
+
+/* Social Icon Hover */
+
+.news-content .social-icons .fa:hover {
+    transform:
+        translateY(-2px);
+}
+
+
+/* ==========================
+   BLOG PARAGRAPH
+========================== */
+
+.news-content p {
+    margin-top: 15px;
+
+    margin-bottom: 20px;
+
+    text-align: justify;
+
+    font-size: 13px;
+
+    line-height: 1.6;
+
+    color: #555555;
+}
+
+
+/* ==========================
+   READ MORE BUTTON
+========================== */
+
+.news-content a.read-more {
+    display: inline-block;
+
+    font-size: 13px;
+
+    background-color: #34495e;
+
+    padding: 9px 18px;
+
+    color: #ffffff;
+
+    text-decoration: none;
+
+    transition:
+        all 0.5s ease-in;
+}
+
+
+/* Read More Hover */
+
+.news-content a.read-more:hover {
+    border:
+        1px solid #34495e;
+
+    border-top-right-radius: 20px;
+
+    background-color: transparent;
+
+    color: #34495e;
+
+    text-decoration: none;
+}
+
+
+/* ==========================================================
+                     RESPONSIVE DESIGN
+========================================================== */
+
+
+/* ==========================
+   TABLET
+========================== */
+
+@media (max-width: 991px) {
+
+    /* Blog images */
+
+    .news-img img {
+        height: 200px;
+    }
+
+
+    /* Blog content */
+
+    .news-content {
+        padding: 18px;
+    }
+
+
+    /* FAQ */
+
+    .faq-content {
+        display: block;
+    }
+
+
+    .faq-content .col-md-8,
+    .faq-content .col-md-4 {
+        width: 100%;
+    }
+
+
+    .phone-column {
+        margin-top: 50px;
+
+        padding-left: 15px;
+    }
+
+
+    .freeimage img {
+        width: 250px;
+    }
+}
+
+
+/* ==========================
+   MOBILE
+========================== */
+
+@media (max-width: 767px) {
+
+    /* Navbar */
+
+    body {
+        padding-top: 70px;
+    }
+
+
+    .navbar .container {
+        width: 100%;
+    }
+
+
+    .navbar-brand {
+        height: 70px;
+
+        font-size: 16px;
+    }
+
+
+    .navbar-brand img {
+        height: 35px;
+
+        margin-right: 8px;
+    }
+
+
+    .navbar-collapse {
+        position: static;
+    }
+
+
+    /*
+       Reset desktop-centered menu
+       on mobile.
+    */
+
+    .menu {
+        position: static;
+
+        left: auto;
+
+        transform: none;
+
+        width: 100%;
+
+        margin: 0;
+    }
+
+
+    .menu>li>a {
+        padding: 15px;
+
+        text-align: center;
+    }
+
+
+    .location-btn {
+        margin: 10px;
+
+        text-align: center;
+    }
+
+
+    /* Jumbotron */
+
+    .jumbotron h1 {
+        font-size: 45px;
+    }
+
+
+    .jumbotron p {
+        font-size: 18px;
+    }
+
+
+    /* Slider */
+
+    .slider h2 {
+        font-size: 30px;
+    }
+
+
+    .typing {
+        font-size: 30px;
+    }
+
+
+    .typed-cursor,
+    .cursor {
+        font-size: 30px;
+    }
+
+
+    /* Contact */
+
+    .social-icons {
+        gap: 25px;
+    }
+
+
+    .social-item a {
+        width: 75px;
+
+        height: 75px;
+
+        font-size: 28px;
+    }
+
+
+    /* Services */
+
+    .service-area {
+        padding: 40px 15px 60px;
+    }
+
+
+    .service-area .section-title h2 {
+        font-size: 30px;
+    }
+
+
+    .service-area .section-title p {
+        font-size: 14px;
+    }
+
+
+    .service-wrap {
+        min-height: auto;
+
+        padding: 30px 20px;
+    }
+
+
+    .service-wrap h3 {
+        font-size: 22px;
+    }
+
+
+    .service-wrap p {
+        font-size: 14px;
+    }
+
+
+    /* Blog */
+
+    .latest-news-area {
+        padding: 30px 0 50px;
+
+        scroll-margin-top: 70px;
+    }
+
+
+    .news-img img {
+        height: auto;
+    }
+
+
+    .latest-news-wrap {
+        max-width: 500px;
+
+        margin:
+            0 auto 30px;
+    }
+
+
+    .latest-news-area .section-title h2 {
+        font-size: 24px;
+    }
+
+
+    .news-content {
+        padding: 18px;
+    }
+
+
+    .news-content p {
+        font-size: 13px;
+
+        line-height: 1.6;
+    }
+
+
+    .news-content .social-icons {
+        gap: 2px;
+    }
+
+
+    .news-content .social-icons .fa {
+        padding: 7px 6px;
+    }
+
+
+    /* Team */
+
+    .team-member {
+        margin: 0 5px;
+    }
+
+
+    .team-member .image-wrapper {
+        height: 250px;
+    }
+
+
+    .team-member .image-wrapper img {
+        object-position: center 20%;
+    }
+
+
+    .team-member-name {
+        font-size: 18px;
+    }
+
+
+    .team-member-designation {
+        font-size: 14px;
+    }
+
+
+    .social-list li a {
+        width: 38px;
+
+        height: 38px;
+
+        font-size: 17px;
+    }
+
+
+    .social-list li a i {
+        font-size: 17px;
+    }
+
+
+    /* Owl dots */
+
+    .owl-theme .owl-dots {
+        margin-top: 25px !important;
+    }
+
+
+    .owl-theme .owl-dots .owl-dot span {
+        width: 12px !important;
+
+        height: 12px !important;
+
+        margin: 4px 6px !important;
+    }
+}
+
+
+/* ==========================
+   SMALL MOBILE
+========================== */
+
+@media (max-width: 600px) {
+
+    /* FAQ */
+
+    .faq h2 {
+        font-size: 28px;
+    }
+
+
+    .faq .sub-heading p {
+        font-size: 14px;
+    }
+
+
+    #accordion .panel-title a {
+        font-size: 15px;
+
+        padding:
+            20px 20px 20px 35px;
+    }
+
+
+    .freeimage img {
+        width: 220px;
+    }
+}
+
+
+/* ==========================
+   EXTRA SMALL MOBILE
+========================== */
+
+@media (max-width: 480px) {
+
+    .team-member .image-wrapper {
+        height: 200px;
+    }
+
+
+    .team-member .image-wrapper img {
+        object-position: center 15%;
+    }
+}
+
+
+/* ==========================
+   BLOG SOCIAL ICONS
+========================== */
+
+.news-content>i {
+    font-size: 16px;
+    display: inline-block;
+    padding: 7px 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+
+/* Facebook */
+
+.news-content>.fa-facebook {
+    color: #3b5995;
+}
+
+
+/* Twitter */
+
+.news-content>.fa-twitter {
+    color: #0084b4;
+}
+
+
+/* LinkedIn */
+
+.news-content>.fa-linkedin {
+    color: #0077b5;
+}
+
+
+/* YouTube */
+
+.news-content>.fa-youtube {
+    color: red;
+}
+
+
+/* WhatsApp */
+
+.news-content>.fa-whatsapp {
+    color: #34af23;
+}
+
+
+/* Hover */
+
+.news-content>i:hover {
+    transform: translateY(-2px);
+}
+
+
+/* ==========================================================
+                    BLOG EXTRA FIXES
+========================================================== */
+
+
+
+#latest {
+    scroll-margin-top: 80px;
+}
+
+
+.news-content a.read-more:focus {
+    outline: none;
+
+    text-decoration: none;
+}
+
+
+
+
+.news-img img {
+    max-width: 100%;
+}
+
+
+
+@media (min-width: 768px) {
+
+    .latest-news-area .col-md-4 {
+        min-height: 1px;
+    }
+}
+
+/*================================
+    Counter stat style starts
+==================================*/
+
+.stat {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5),
+            rgba(0, 0, 0, 0.6)), url(../img/cover-bg-1.jpg);
+
+    background-position: center;
+    padding-top: 180px;
+    padding-bottom: 200px;
+    color: white;
+    background-attachment: fixed;
+    margin-top: 100px;
+}
+
+.stat i {
+    font-size: 85px;
+}
+
+.stat-items h2 {
+    font-weight: bolder;
+    font-size: 42px;
+    color: deepskyblue;
+}
+
+.stat p {
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+/*================================
+    Counter stat style Ends
+==================================*/
+
+/*================================
+    CONTACT AREA
+==================================*/
+
+.contact-area {
+    position: relative;
+    margin-top: 60px;
+    padding: 100px 0 80px;
+
+    background-image:
+        linear-gradient(rgba(0, 0, 0, 0.65),
+            rgba(0, 0, 0, 0.75)),
+        url("../img/cover-bg-1.jpg");
+
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+
+    color: #ffffff;
+}
+
+
+/*================================
+    CONTACT TITLE
+==================================*/
+
+.contact-area .section-heading {
+    margin-bottom: 45px;
+}
+
+.contact-area .section-title {
+    color: #ffffff;
+    font-size: 32px;
+    font-weight: 600;
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+.border-bottom-now {
+    width: 50px;
+    height: 3px;
+    background: #16a085;
+    margin: 0 auto;
+}
+
+
+/*================================
+    CONTACT FORM
+==================================*/
+
+.contact-form {
+    width: 100%;
+    max-width: 850px;
+    margin: 0 auto;
+}
+
+
+/* Form controls */
+
+.contact-form .form-control {
+    width: 100%;
+    height: 50px;
+
+    margin-bottom: 15px;
+    padding: 12px 15px;
+
+    background: rgba(255, 255, 255, 0.95);
+    color: #333333;
+
+    border: 1px solid #dddddd;
+    border-radius: 4px;
+
+    font-size: 15px;
+
+    box-shadow: none;
+
+    transition: all 0.3s ease;
+}
+
+
+/* Textarea */
+
+.contact-form textarea.form-control {
+    height: 130px;
+    resize: vertical;
+}
+
+
+/* Placeholder */
+
+.contact-form .form-control::placeholder {
+    color: #888888;
+}
+
+
+/* Focus */
+
+.contact-form .form-control:focus {
+    background: #ffffff;
+    border-color: #16a085;
+
+    outline: none;
+
+    box-shadow: 0 0 8px rgba(22, 160, 133, 0.35);
+}
+
+
+/*================================
+    SUBMIT BUTTON
+==================================*/
+
+.contact-form .btnn,
+.contact-form button.btnn {
+    display: inline-block;
+
+    padding: 13px 35px;
+
+    background: #16a085;
+    color: #ffffff;
+
+    border: 2px solid #16a085;
+    border-radius: 4px;
+
+    font-size: 16px;
+    font-weight: 600;
+
+    cursor: pointer;
+
+    transition: all 0.3s ease;
+}
+
+
+/* Button hover */
+
+.contact-form .btnn:hover,
+.contact-form button.btnn:hover {
+    background: #138f77;
+    border-color: #138f77;
+
+    color: #ffffff;
+
+    transform: translateY(-2px);
+
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+
+/* Button disabled */
+
+.contact-form button.btnn:disabled {
+    opacity: 0.7;
+    cursor: not-allowed;
+}
+
+
+/*================================
+    BUTTON SENT STATE
+==================================*/
+
+.contact-form button.btnn.sent {
+    background: #27ae60;
+    color: #ffffff;
+    border-color: #1e8449;
+}
+
+
+/* Check mark */
+
+.contact-form button.btnn.sent::after {
+    content: "\2713";
+
+    display: inline-block;
+
+    margin-left: 8px;
+
+    transform: scale(0.8);
+
+    animation: pop 400ms ease-out;
+}
+
+
+@keyframes pop {
+
+    0% {
+        transform: scale(0.6);
+        opacity: 0;
+    }
+
+    60% {
+        transform: scale(1.15);
+        opacity: 1;
+    }
+
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+
+}
+
+
+/*================================
+    FORM ALERT
+==================================*/
+
+.form-alert {
+    display: none;
+
+    padding: 12px 18px;
+
+    margin-bottom: 20px;
+
+    border-radius: 4px;
+
+    font-weight: 600;
+
+    text-align: center;
+}
+
+
+.form-alert.success {
+    background: #efffed;
+    color: #1f8a3c;
+    border: 1px solid #b6efc2;
+}
+
+
+.form-alert.error {
+    background: #fff1f0;
+    color: #b00020;
+    border: 1px solid #f0b3b3;
+}
+
+
+/*================================
+    CONTACT INFORMATION
+==================================*/
+
+.contact-infos {
+    width: 100%;
+
+    margin-top: 70px;
+
+    padding: 35px 0;
+
+    background: rgba(0, 0, 0, 0.45);
+
+    border-top: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+
+/* Contact item */
+
+.contact-item {
+    padding: 10px 20px;
+}
+
+
+/* Contact icons */
+
+.contact-icon {
+    display: inline-flex;
+
+    align-items: center;
+    justify-content: center;
+
+    width: 55px;
+    height: 55px;
+
+    margin-bottom: 15px;
+
+    border: 2px solid #ffffff;
+
+    border-radius: 50%;
+
+    background: rgba(22, 160, 133, 0.85);
+}
+
+
+.contact-icon i {
+    color: #ffffff;
+    font-size: 22px;
+}
+
+
+/* Contact details */
+
+.contact-detail {
+    color: #ffffff;
+
+    font-size: 15px;
+
+    line-height: 1.7;
+
+    margin: 0;
+}
+
+
+/*================================
+    QUICK CONTACT BUTTON
+==================================*/
+
+.btn-quickly {
+    margin-left: 10px;
+
+    padding: 10px 18px;
+
+    background: #16a085;
+
+    color: #ffffff;
+
+    border: 1px solid #138f77;
+
+    border-radius: 4px;
+
+    cursor: pointer;
+
+    transition: all 0.3s ease;
+}
+
+
+.btn-quickly:hover {
+    background: #138f77;
+    color: #ffffff;
+}
+
+
+/*================================
+    QUICK CONTACT MODAL
+==================================*/
+
+.modal-contact-wrap {
+    position: fixed;
+
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+
+    z-index: 2000;
+
+    display: none;
+
+    align-items: center;
+    justify-content: center;
+}
+
+
+.modal-contact-wrap .modal-overlay {
+    position: absolute;
+
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+
+    background: rgba(0, 0, 0, 0.65);
+}
+
+
+.modal-contact-wrap .modal-content {
+    position: relative;
+
+    width: 90%;
+    max-width: 700px;
+
+    padding: 30px;
+
+    background: #ffffff;
+
+    border-radius: 6px;
+
+    z-index: 2001;
+
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.3);
+}
+
+
+.modal-contact-wrap .modal-close {
+    position: absolute;
+
+    top: 10px;
+    right: 15px;
+
+    background: none;
+
+    border: none;
+
+    font-size: 30px;
+
+    line-height: 1;
+
+    cursor: pointer;
+}
+
+
+.modal-contact-wrap h3 {
+    margin-top: 0;
+    margin-bottom: 15px;
+}
+
+
+.modal-contact-wrap form {
+    margin-bottom: 15px;
+}
+
+
+.modal-open {
+    overflow: hidden;
+}
+
+
+/*================================
+    MOBILE RESPONSIVE
+==================================*/
+
+@media (max-width: 768px) {
+
+    .contact-area {
+        padding: 70px 15px 50px;
+
+        background-attachment: scroll;
+    }
+
+    .contact-area .section-title {
+        font-size: 26px;
+    }
+
+    .contact-form {
+        max-width: 100%;
+    }
+
+    .contact-infos {
+        margin-top: 50px;
+    }
+
+    .contact-item {
+        margin-bottom: 30px;
+    }
+
+    .modal-contact-wrap .modal-content {
+        padding: 20px;
+    }
+
+}
+
+/*========================================
+       Map area style starts
+========================================*/
+
+.maps {
+    width: 100%;
+    margin-top: 20px;
+    padding: 0;
+}
+
+.maps iframe {
+    width: 100% !important;
+    height: 450px !important;
+    display: block;
+    border: 0;
+    margin: 0;
+    padding: 0;
+}
+
+/*========================================
+       Map area style Ends
+========================================*/
